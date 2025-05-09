@@ -11,6 +11,11 @@
 </head>
 <body>
 <div class="container mt-4">
+
+    <p><a href="{{ route('welcome') }}">Home</a></p>
+    <p><a href="{{ route('articles') }}">Articles</a></p>
+    <p><a href="{{ route('about') }}">About</a></p>
+
     <h1>@yield('header')</h1>
     <div>
         @yield('content')
