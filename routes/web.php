@@ -29,6 +29,8 @@ Route::get('articles/{id}/edit', [ArticleController::class, 'edit'])->name('arti
 
 Route::patch('articles/{id}', [ArticleController::class, 'update'])->name('articles.update');
 
+Route::delete('articles/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+
 
 //--------------c- article_categories --------------------------------
 
@@ -43,3 +45,13 @@ Route::post('article_categories', [ArticleCategoryController::class, 'store'])
 
 Route::get('article_categories/{id}', [ArticleCategoryController::class, 'show'])
     ->name('article_categories.show');
+
+Route::get('article_categories/{id}/edit', [ArticleCategoryController::class, 'edit'])
+    ->name('article_categories.edit');
+
+Route::patch('article_categories/{id}', [ArticleCategoryController::class, 'update'])
+    ->name('article_categories.update');
+
+Route::delete('article_categories/{id}', [ArticleCategoryController::class, 'destroy'])
+    ->name('article_categories.destroy');
+

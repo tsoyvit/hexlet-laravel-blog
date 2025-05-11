@@ -60,4 +60,11 @@ class ArticleController extends Controller
         return redirect(route('articles.index'))
             ->with('success', 'Article updated successfully');
     }
+
+    public function destroy($id)
+    {
+        $article = Article::findOrFail($id);
+        $article->delete();
+        return redirect(route('articles.index'))->with('success', 'Article deleted successfully');
+    }
 }
